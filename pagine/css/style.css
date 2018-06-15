@@ -1,0 +1,154 @@
+body{
+  height:1000px;
+}
+/*-------------------------------------------------- codici nav*/
+#infos{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+#infos ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: 'Abel', sans-serif;
+}
+#infos ul li{
+  display: inline-block;
+  position: relative;
+}
+#infos ul li a{
+  font-family: 'Abel', sans-serif;
+  color: black;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+#infos ul li a:hover{
+  color: #f3f3f3;
+  transition: all 0.3s ease-in-out;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+}
+#infos ul li ul{
+  display: none;
+  position: absolute;
+}
+#infos ul li:hover ul{
+  display: block;
+}
+
+#infos ul li ul li a{
+  font-size: 12px;
+  padding: 10px;
+}
+
+/*----------------------------------slider*/
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+
+#slider{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+
+}
+
+body { margin: 0; }
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: center;
+  font-size: 0;
+  animation: 20s slidy infinite;
+}
+/*----------------------------------slider fine*/
+
+/*-------------------------------------------------- sezioni about*/
+.sezioni{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sezioni div{
+  width: 50%;
+}
+
+.sezioni div #description{
+  float:right;
+}
+
+#description{
+  padding-left: 40px;
+  padding-right: 40px;
+  color: black;
+  font-family:sans-serif;
+  font-weight: lighter;
+}
+
+#full-image{
+  width:70vh;
+  height: 50vh;
+  float: left;
+}
+/*-------------------------------------------------sezioni about fine*/
+
+/*-------------------------------------------------portfolio immagini*/
+.gridbox{
+  position: absolute;
+  top: 85%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  grid-gap: 6px;
+}
+/*-------------------------------------------------portfolio immagini fine*/
+
+/*-------------------------------------------------testo esercizi*/
+#eserc{
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+
+#eserc a{
+  color: black;
+  font-family:sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+}
+/*-------------------------------------------------testo esercizi fine*/
+#credit{
+  display: block;
+  padding-top: 60vh;
+  padding-bottom:10vh;
+  font-size: 10px;
+  font-family:sans-serif;
+  font-weight: lighter;
+  text-align:center;
+}

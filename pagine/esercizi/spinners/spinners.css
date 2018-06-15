@@ -1,0 +1,68 @@
+@keyframes spin {
+  from {width: 0px;
+height: 0px;
+opacity: 1;
+  }
+  to {width: 100px;
+    height: 100px;
+  opacity: 0;}
+}
+
+@keyframes cspin {
+  from {width: 100px;
+  height: 100px;}
+  to {width: 0px;
+  height: 0px;}
+}
+
+#spinner{
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: spin 1s infinite alternate; /*a questo oggetto applico questa animazione*/
+position: absolute;
+top: 50%;
+left: 50%;
+  background-color: red;
+  height: 2em;
+  width: 150px;
+}
+
+#cspinner{
+  animation: cspin 1s infinite alternate;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.5%;
+}
+
+@keyframes bspin {
+  from{transform: rotate(0) scale(1);}
+  to{transform: rotate(360deg) scale(0.5) translate(100px,0);}
+}
+
+@keyframes move {
+  0%{transform: translate(0,0);}
+  50%{transform: translate(100px,0);}
+  100%{transform: translate(100px,100px);}
+}
+
+#container{
+  position: absolute;
+  top: 50px; left: 50px;
+  animation: move 1s infinite alternate;
+}
+
+#spinner2{
+  position: absolute;
+  top: 50%; left: 50%;
+  animation: bspin 1s infinite alternate;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+}
